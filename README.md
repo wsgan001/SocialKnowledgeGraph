@@ -24,5 +24,7 @@
 <br> // 目前只有印到螢幕, 未來要寫入DB
 
 # 使用SPARQL抓出DBpedia中地點的page
+(0) cd SPARQL
+
 (1) 抓出DBpedia中台南的所有地點 (有階層性)
 <br> $ python GetWikiPlace.py > WikiTainanPlace.txt
