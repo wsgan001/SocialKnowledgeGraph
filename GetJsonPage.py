@@ -25,4 +25,11 @@ def GetIdName(PID):
         print "ERROR"
         pass
 
-GetIdName("454836154602708")
+#GetIdName("454836154602708")
+f = open(sys.argv[1],'r')
+while True:
+    line = f.readline()
+    if not line:break
+    tmp = line.split(" ")
+    print tmp[0],
+    GetIdName(tmp[0])
