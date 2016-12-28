@@ -7,6 +7,7 @@ while True:
     line = line.replace("\n","")
     tmp = line.split("\t")
     if tmp[0] not in Rset:
+        Rset.add(tmp[0])
         print line
     else:
-        Rset.add(tmp[0])
+        pass
