@@ -28,3 +28,10 @@
 
 (1) 抓出DBpedia中台南的所有地點 (有階層性)
 <br> $ python GetWikiPlace.py > WikiTainanPlace.txt
+
+# 20161228
+(1) 先用SPARQL裏面的GetWikiPlace.py產生WikiTainanPlace.txt, 再用GetLabel.py產生TainanLabel.txt, 並把TainanLabel.txt複製到GetFbPage<br>
+(2) 到GetFbPage用GetTainanPage.py讀TainanLabel.txt產生tmp.txt, 再用process.py將tmp.txt變成TainanPage.txt(去除重複)<br>
+(3) 在GetFbPage中用GetJsonPage.py讀TainanPage.txt產生20161228.txt, 並搬移到JsonPage(備份用), 以及複製到GOD的output.txt<br>
+(4) 到GOD, $ nohup python ngram.py output.txt Entity2_5.txt &> NER.txt &, NER.txt中格式為post_id, 發文時間, entity<br>
+ps. GOD中的Entity2_5.txt由中文dbpedia infobox一連串處理產生<br>
