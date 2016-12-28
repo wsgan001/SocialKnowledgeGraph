@@ -34,4 +34,4 @@
 (2) 到GetFbPage用GetTainanPage.py讀TainanLabel.txt產生tmp.txt, 再用process.py將tmp.txt變成TainanPage.txt(去除重複)<br><br>
 (3) 在GetFbPage中用GetJsonPage.py讀TainanPage.txt產生20161228.txt, 並搬移到JsonPage(備份用), 以及複製到GOD的output.txt<br><br>
 (4) 到GOD, $ nohup python ngram.py output.txt Entity2_5.txt &> NER.txt &, NER.txt中格式為post_id, 發文時間, entity<br><br>
-ps. GOD中的Entity2_5.txt由中文dbpedia infobox一連串處理產生<br><br>
+ps. GOD中的Entity2_5.txt由中文dbpedia infobox一連串處理產生, 處理於專案 DBpedia https://github.com/yenkuanlee/DBpedia<br><br>
